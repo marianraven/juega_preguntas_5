@@ -3,17 +3,28 @@ const contenedorJugar= document.getElementById("jugar");
 const resultadoJugar= document.getElementById("resultado");
 const botonJugar= document.getElementById("btnJugar");
 //creo un objeto que tiene una propiedad llamada pregunta
-const preguntas=[
+const preguntas = [
     {
         pregunta:"1.Quien mato a roger rabits?",
         //creo un objeto dentro de otro que contiene tres propiedades que manejo como opciones
-        respuestas:{
+        respuestas: {
             a:"milton casco",
             b:"sss",
-            c:"jjc",
+            c:"jjc"
         },
         //creo otra propiedad que tendra la respuesta correcta de cada objeto
         acertar:"b"
+    },
+    {
+        pregunta:"2.Quien mato a roger rabits?",
+        //creo un objeto dentro de otro que contiene tres propiedades que manejo como opciones
+        respuestas: {
+            a:"chavez",
+            b:"sss",
+            c:"jjc"
+        },
+        //creo otra propiedad que tendra la respuesta correcta de cada objeto
+        acertar:"c"
     },
 ];
 //cada pregunta será un nuevo objeto con las propiedades del anterior
@@ -25,8 +36,8 @@ function veamosJugar(){
     //creo un forEach para recorrer mi array, irá recorriendo la pregunta actual y su numero de pregunta
     preguntas.forEach((pActual, numPreg)=>{
         //ahora creo un array sólo para las respuestas, y como tiene opciones le pongo un bucle dentro de otro bucle para que lo recorra
-        const respuestas=[];
-        for(lRespuesta in pActual, respuestas){
+        const respuestas = [];
+        for(lRespuesta in pActual.respuestas){
             //creo el html con los distintos valores, donde tomo el numero de pregunta y la letra de la respuesta
             //comparo la letra de la respuesta con la pregunta actual.repuestas y la letra de la respuestas propiamente dicho
             respuestas.push(
@@ -38,10 +49,10 @@ function veamosJugar(){
         }
         //acá tomo el objeto completo, donde tomo la pregunta actual por cada iteración, hago lo mismo con las respuestas
         juegoCompleto.push(
-           ` <div class="q">
+           ` <div class="preg">
                 ${pActual.pregunta}
             </div>
-            <div class="res">
+            <div class="respuestas">
                 ${respuestas.join('')}
             </div>`
         
