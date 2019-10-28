@@ -36,8 +36,7 @@ function veamosJugar(){
                 </label> `
             );
         }
-        //acá tomo el objeto completo, donde tomo la pregunta actual por cada iteración 
-       //hago lo mismo con las respuestas
+        //acá tomo el objeto completo, donde tomo la pregunta actual por cada iteración, hago lo mismo con las respuestas
         juegoCompleto.push(
            ` <div class="q">
                 ${pActual.pregunta}
@@ -53,17 +52,26 @@ function veamosJugar(){
 }
 veamosJugar();
 
+//creo una función que compruebe las respuestas por el checkbox marcado
 function verPerformance(){
-    const respuestas= contenedorJugar.querySelectorAll(`.respuestas`);
-    let aciertos=0;
+    //capturo el div que cree y me da un array
+    const respuestas= contenedorJugar.querySelectorAll(".respuestas");
+    let aciertos=0;//contador para obtener el resultado
+    //armo el bucle que recorre la pregunta actual y su numero de pregunta
     preguntas.forEach((pActual, numPreg)=>{
+        //aca guardo todas las respuestas y las recorro una a una, luego checkeo el nombre y el numero del indice
         const listarRespuestas= respuestas[numPreg];
-        const checkear= `input [name= ${numPreg}]:checked`;
+        const checkear= `input [name= '${numPreg}']:checked`;
+        //aca guardo la pregunta elegida y compuebo cual se selecciono
         const seleccionada= (listarRespuestas.querySelector(checkear) || {}).value;//esto va por si el usuario no marco nada
+        //compruebo la casilla elegida con la pregunta actual y su respuesta correcta y de ser valida la sumo como acierto
         if(seleccionada=== pActual.acertar){
             aciertos ++;
+        
+     } 
 
-     } });
-        resultadoJugar.innerHTML='usted ha acertado'+ aciertos+ 'preguntas de un total de '+ preguntas.length;
-        botonJugar.addEventListener(`click`, verPerformance);
+    });
+    resultadoJugar.innerHTML='Tus aciertos son:'+ aciertos+ 'preguntas de un total de: '+ preguntas.length;
 }
+ botonJugar.addEventListener('click', verPerformance);
+
