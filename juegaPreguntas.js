@@ -1,31 +1,43 @@
-const resultadoJugar= document.getElementById("resultado");
-const contenedorJugar= document.getElementById("jugar");
-const botonJugar= document.getElementById("btnJugar");
 
+const contenedorJugar= document.getElementById("jugar");
+const resultadoJugar= document.getElementById("resultado");
+const botonJugar= document.getElementById("btnJugar");
+//creo un objeto que tiene una propiedad llamada pregunta
 const preguntas=[
     {
         pregunta:"1.Quien mato a roger rabits?",
+        //creo un objeto dentro de otro que contiene tres propiedades que manejo como opciones
         respuestas:{
             a:"milton casco",
             b:"sss",
             c:"jjc",
         },
+        //creo otra propiedad que tendra la respuesta correcta de cada objeto
         acertar:"b"
     },
 ];
+//cada pregunta será un nuevo objeto con las propiedades del anterior
 
+//creo la funcion que inyectará en el html lo que tiene este archivo js
 function veamosJugar(){
+    //declaro un array donde iré metiendole en "jugar" con el html ,las respuestas correctas y demás 
     const juegoCompleto=[];
+    //creo un forEach para recorrer mi array, irá recorriendo la pregunta actual y su numero de pregunta
     preguntas.forEach((pActual, numPreg)=>{
+        //ahora creo un array sólo para las respuestas, y como tiene opciones le pongo un bucle dentro de otro bucle para que lo recorra
         const respuestas=[];
         for(lRespuesta in pActual, respuestas){
+            //creo el html con los distintos valores, donde tomo el numero de pregunta y la letra de la respuesta
+            //comparo la letra de la respuesta con la pregunta actual.repuestas y la letra de la respuestas propiamente dicho
             respuestas.push(
                   `<label>
-                    <input type="radio" name="$(numPreg)" value="$(lRespuesta)"/>
+                    <input type="radio" name="${numPreg}" value="${lRespuesta}"/>
                     ${lRespuesta} : ${pActual.respuestas[lRespuesta]}
                 </label> `
             );
         }
+        //acá tomo el objeto completo, donde tomo la pregunta actual por cada iteración 
+       //hago lo mismo con las respuestas
         juegoCompleto.push(
            ` <div class="q">
                 ${pActual.pregunta}
@@ -34,11 +46,13 @@ function veamosJugar(){
                 ${respuestas.join('')}
             </div>`
         
-            )
+            );
     });
-    contenedorJugar.innerHTML=juegoCompleto.join('');
+    //opmitimizo mi código con la función join para que quede más limpio
+    contenedorJugar.innerHTML=juegoCompleto.join("\n");
 }
 veamosJugar();
+
 function verPerformance(){
     const respuestas= contenedorJugar.querySelectorAll(`.respuestas`);
     let aciertos=0;
