@@ -2,6 +2,7 @@
 const contenedorJugar= document.getElementById("jugar");
 const resultadoJugar= document.getElementById("resultado");
 const botonJugar= document.getElementById("btnJugar");
+const botonVolver= document.getElementById("volver");
 //creo un objeto que tiene una propiedad llamada pregunta
 const preguntas = [
     {
@@ -121,19 +122,23 @@ function veamosJugar(){
             //comparo la letra de la respuesta con la pregunta actual.repuestas y la letra de la respuestas propiamente dicho
             respuestas.push(
                   `<label>
+                     <div>
                     <input type="radio" name="${numPreg}" value="${lRespuesta}"/>
                     ${lRespuesta} : ${pActual.respuestas[lRespuesta]}
+                    </div>
                 </label> `
             );
         }
         //acá tomo el objeto completo, donde tomo la pregunta actual por cada iteración y la coloco en un div, hago lo mismo con las respuestas
         juegoCompleto.push(
-           ` <div class="preg">
-                ${pActual.pregunta}
-            </div>
-            <div class="respuestas">
-                ${respuestas.join('')}
-            </div>`
+           ` <div>---------------------------------------------------------------------------------</div>
+               <div class="preg">
+                      ${pActual.pregunta}
+               </div>
+           
+               <div class="respuestas">
+                      ${respuestas.join('\n')}
+               </div>`
         
             );
     });
@@ -165,4 +170,3 @@ function verPerformance(){
     resultadoJugar.innerHTML = 'Cantidad de aciertos:  ' + aciertos + 'preguntas de un total de: '+ preguntas.length;
 }
  botonJugar.addEventListener('click', verPerformance);
-
