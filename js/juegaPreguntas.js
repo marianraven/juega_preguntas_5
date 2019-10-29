@@ -130,7 +130,7 @@ function veamosJugar(){
         }
         //acá tomo el objeto completo, donde tomo la pregunta actual por cada iteración y la coloco en un div, hago lo mismo con las respuestas
         juegoCompleto.push(
-           ` <div>---------------------------------------------------------------------------------</div>
+           ` <div>---------------------------------------------------------------------------------------------------------------------------------------------------------</div>
                <div class="preg">
                       ${pActual.pregunta}
                </div>

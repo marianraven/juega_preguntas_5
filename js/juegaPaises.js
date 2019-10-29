@@ -122,7 +122,7 @@ function veamosJugar(){
          }
          
          juegoCompleto.push(
-            ` <div>---------------------------------------------------------------------------------</div>
+            ` <div>-----------------------------------------------------------------------------------------------------------------------------------------------------</div>
                 <div class="preg">
                        ${pActual.pregunta}
                 </div>
@@ -153,5 +153,6 @@ function verPerformance(){
 
     });
     resultadoJugar.innerHTML = 'Cantidad de aciertos:  ' + aciertos + 'preguntas de un total de: '+ preguntas.length;
+    
 }
  botonJugar.addEventListener('click', verPerformance);

@@ -125,4 +125,8 @@ span{
     background-color: rgb(26, 5, 212);
     font-weight: bold;
 }
-
+div #mostrarR{
+    margin:4px;
+    background-color: rgb(28, 143, 104);
+    color:rgb(8, 243, 165);
+}

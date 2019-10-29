@@ -35,7 +35,7 @@ const preguntas = [
         acertar : "a"
     },
     {
-        pregunta:"4.DE qué manera murió Napoleón bonaparte?",
+        pregunta:"4.De qué manera murió Napoleón bonaparte?",
         respuestas: {
             a:"Peste negra",
             b:"Fusilamiento",
@@ -64,7 +64,7 @@ const preguntas = [
         acertar : "b"
     },
     {
-        pregunta:"7.DE qué nacionalidad es el dueño del lago escondido? ",
+        pregunta:"7.De qué nacionalidad es el dueño del lago escondido? ",
         respuestas: {
             a:"Estadounidense",
             b:"Canadiense",
@@ -74,14 +74,13 @@ const preguntas = [
         acertar : "a"
     },
     {
-        pregunta:"8.Cuál es el país menos poblado del mundo?",
+        pregunta:"8.En qué año sucedió a revolución francesa?",
         respuestas: {
-            a:"San Marino",
-            b:"Mónaco",
-            c:"Islas Marshall",
-            d:"Vaticano"
+            a:"1979",
+            b:"1969",
+            c:"1989"
         },
-        acertar : "d"
+        acertar : "a"
     },
     {
         pregunta:"9.Cuál es la verdadera capital de Bolivia?",
@@ -93,12 +92,12 @@ const preguntas = [
         acertar : "b"
     },
     {
-        pregunta:"10.En qué país se encuentran los mayores pozos Petrolíferos del mundo?",
+        pregunta:"10.Quien escribió el primer libro de estrategia política 'El principe'?",
         respuestas: {
-            a:"Arabia Saudí",
-            b:"Venezuela",
-            c:"Canadá",
-            d:"Irán"
+            a:"Karl Marx",
+            b:"Maquiavelo",
+            c:"Orson welles",
+            d:"Thomas Hobbes"
         },
         acertar : "b"
     },
@@ -122,7 +121,7 @@ function veamosJugar(){
          }
          
          juegoCompleto.push(
-            ` <div>---------------------------------------------------------------------------------</div>
+            ` <div>---------------------------------------------------------------------------------------------------------------------------------------------------------</div>
                 <div class="preg">
                        ${pActual.pregunta}
                 </div>
@@ -150,8 +149,9 @@ function verPerformance(){
      } else{
          respuestas[numPreg].style.color='yellow';
      }
-
-    });
-    resultadoJugar.innerHTML = 'Cantidad de aciertos:  ' + aciertos + 'preguntas de un total de: '+ preguntas.length;
+ 
+   });
+    resultadoJugar.innerHTML =  'Cantidad de aciertos:  ' + aciertos + 'preguntas de un total de: '+ preguntas.length;
+    
 }
  botonJugar.addEventListener('click', verPerformance);
