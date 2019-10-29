@@ -4,101 +4,99 @@ const botonJugar= document.getElementById("btnJugar");
 
 const preguntas = [
     {
-        pregunta:"1.Cuántos países componen el continente de Oceanía?",
+        pregunta:"1.Cuántos téntaculos tiene un pulpo?",
         respuestas: {
             a:"10",
-            b:"12",
-            c:"14"
-        },
-        acertar : "c"
-    },
-    {
-        pregunta:"2.Cual de éstos equipos no pertenecen a Europa?",
-        respuestas: {
-            a:"Real Madrid",
-            b:"Paris Saint-Germain",
-            c:"Manchester United",
-            d:"Ajax",
-            e:"Juventus",
-            f:"LOs Angeles Galaxy"
-        },
-        acertar : "f"
-    },
-    {
-        pregunta:"3.Cuál es el volcán más activo del mundo?",
-        respuestas: {
-            a:"Yellowstone, Estados Unidos",
-            b:"Sakurajima, Japón",
-            c:"Monte Vesubio, Italia"
-        },
-        acertar : "a"
-    },
-    {
-        pregunta:"4.Cuál es la capital de Eslovenia?",
-        respuestas: {
-            a:"Andoxia",
-            b:"Eslotev",
-            c:"Lausesburg",
-            d:"Liubliana"
-        },
-        acertar : "d"
-    },
-    {
-        pregunta:"5.Cuántos departamentos conforman el país de Francia sin contar los considerados de ultramar?",
-        respuestas: {
-            a:"11",
-            b:"12",
-            c:"13",
-            d:"15"
-        },
-        acertar : "c"
-    },
-    {
-        pregunta:"6.En qué año se independizó Sudán del sur?",
-        respuestas: {
-            a:"1999",
-            b:"2001",
-            c:"2005",
-            d:"2011",
-            e:"2015"
-        },
-        acertar : "d"
-    },
-    {
-        pregunta:"7.Cual es el lago más grande de la republica Argentina? ",
-        respuestas: {
-            a:"Lago Nahuel Huapi",
-            b:"Lago Viedma",
-            c:"Lago Argentino"
-        },
-        acertar : "c"
-    },
-    {
-        pregunta:"8.Cuál es el país menos poblado del mundo?",
-        respuestas: {
-            a:"San Marino",
-            b:"Mónaco",
-            c:"Islas Marshall",
-            d:"Vaticano"
-        },
-        acertar : "d"
-    },
-    {
-        pregunta:"9.Cuál es la verdadera capital de Bolivia?",
-        respuestas: {
-            a:"Bolivia",
-            b:"Sucre",
-            c:"La Paz"
+            b:"8",
+            c:"6"
         },
         acertar : "b"
     },
     {
-        pregunta:"10.En qué país se encuentran los mayores pozos Petrolíferos del mundo?",
+        pregunta:"2.Cuál es el mamífero más pequeño del mundo?",
         respuestas: {
-            a:"Arabia Saudí",
-            b:"Venezuela",
-            c:"Canadá",
-            d:"Irán"
+            a:"auricario",
+            b:"murcielago japones",
+            c:"topito ruso",
+            d:"musaraña"
+        },
+        acertar : "d"
+    },
+    {
+        pregunta:"3.Cuántos viven los orangutanes?",
+        respuestas: {
+            a:"de 15 a 35 años",
+            b:"de 35 a 45 años",
+            c:"de 45 a 55 años"
+        },
+        acertar : "a"
+    },
+    {
+        pregunta:"4.Cuál es el pez más grande del mundo?",
+        respuestas: {
+            a:"El tiburón ballena blanco",
+            b:"La ballena azul",
+            c:"El calamar colosal",
+            d:"La medusa melena de león gigante"
+        },
+        acertar : "d"
+    },
+    {
+        pregunta:"5.Cómo se comunican las abejas?",
+        respuestas: {
+            a:"Por sus feromónas",
+            b:"Por el zumbido de sus alas",
+            c:"Por un lenguaje particlar de su especie"
+        },
+        acertar : "a"
+    },
+    {
+        pregunta:"6.Cuál de los siguientes animales sobreviviría a la caida de un avión?",
+        respuestas: {
+            a:"Gato",
+            b:"Hamster",
+            c:"Leopardo"
+        },
+        acertar : "b"
+    },
+    {
+        pregunta:"7.Cuál es el animal más venenoso del mundo? ",
+        respuestas: {
+            a:"Escorpión palestino amarillo",
+            b:"Cobra real ",
+            c:"Avispa de mar",
+            d:"Araña brasileña bananera",
+            e:"Rana venenosa de Malasia"
+        },
+        acertar : "c"
+    },
+    {
+        pregunta:"8.Cuál de los siguientes animales esta en peligro de extinción?",
+        respuestas: {
+            a:"Oso polar",
+            b:"Tigre de bengala",
+            c:"Mono tikiriyaki",
+            d:"Papagayo de papua"
+        },
+        acertar : "a"
+    },
+    {
+        pregunta:"9.Cuál de los siguientes es considerado el animal más lento del planeta?",
+        respuestas: {
+            a:"Estrella de mar",
+            b:"Caracol de jardín",
+            c:"Tortuga",
+            d:"Perezoso"
+        },
+        acertar : "b"
+    },
+    {
+        pregunta:"10.Cuántas crías puede tener un caballito de mar a la vez?",
+        respuestas: {
+            a:"de 100 a 500",
+            b:"hasta 1500",
+            c:"de 50 a 100",
+            d:"de 500 a 1000"
         },
         acertar : "b"
     },

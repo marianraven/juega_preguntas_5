@@ -4,74 +4,74 @@ const botonJugar= document.getElementById("btnJugar");
 
 const preguntas = [
     {
-        pregunta:"1.Cuántos países componen el continente de Oceanía?",
+        pregunta:"1.Quién fue el primer presidente de la Argentina?",
         respuestas: {
-            a:"10",
-            b:"12",
-            c:"14"
+            a:"Hipolito Yrigoyen",
+            b:"Bartolome Mitre",
+            c:"Bernardino Rivadavia", 
+            d:"Cornelio Saavedra"
         },
         acertar : "c"
     },
     {
-        pregunta:"2.Cual de éstos equipos no pertenecen a Europa?",
+        pregunta:"2.Cuántos paises liberto San Martín?",
         respuestas: {
-            a:"Real Madrid",
-            b:"Paris Saint-Germain",
-            c:"Manchester United",
-            d:"Ajax",
-            e:"Juventus",
-            f:"LOs Angeles Galaxy"
+            a:"3",
+            b:"4",
+            c:"5",
+            d:"6",
+            e:"7"
         },
-        acertar : "f"
+        acertar : "b"
     },
     {
-        pregunta:"3.Cuál es el volcán más activo del mundo?",
+        pregunta:"3.En qué año sucedió la primera guerra mundial?",
         respuestas: {
-            a:"Yellowstone, Estados Unidos",
-            b:"Sakurajima, Japón",
-            c:"Monte Vesubio, Italia"
+            a:"1914",
+            b:"1918",
+            c:"1920",
+            d:"1921"
         },
         acertar : "a"
     },
     {
-        pregunta:"4.Cuál es la capital de Eslovenia?",
+        pregunta:"4.DE qué manera murió Napoleón bonaparte?",
         respuestas: {
-            a:"Andoxia",
-            b:"Eslotev",
-            c:"Lausesburg",
-            d:"Liubliana"
+            a:"Peste negra",
+            b:"Fusilamiento",
+            c:"Guillotina",
+            d:"Úlcera péptica"
         },
         acertar : "d"
     },
     {
-        pregunta:"5.Cuántos departamentos conforman el país de Francia sin contar los considerados de ultramar?",
+        pregunta:"5.Cuantas millas marinas le corresponden a Argentina por ley?",
         respuestas: {
-            a:"11",
-            b:"12",
-            c:"13",
-            d:"15"
+            a:"200",
+            b:"201",
+            c:"350",
         },
         acertar : "c"
     },
     {
-        pregunta:"6.En qué año se independizó Sudán del sur?",
+        pregunta:"6.En qué año se independizó Brasil?",
         respuestas: {
-            a:"1999",
-            b:"2001",
-            c:"2005",
-            d:"2011",
-            e:"2015"
+            a:"1816",
+            b:"1822",
+            c:"1824",
+        
         },
-        acertar : "d"
+        acertar : "b"
     },
     {
-        pregunta:"7.Cual es el lago más grande de la republica Argentina? ",
+        pregunta:"7.DE qué nacionalidad es el dueño del lago escondido? ",
         respuestas: {
-            a:"Lago Nahuel Huapi",
-            b:"Lago Viedma",
-            c:"Lago Argentino"
+            a:"Estadounidense",
+            b:"Canadiense",
+            c:"Alemán",
+            d:"ESpañol"
         },
-        acertar : "c"
+        acertar : "a"
     },
     {
         pregunta:"8.Cuál es el país menos poblado del mundo?",
