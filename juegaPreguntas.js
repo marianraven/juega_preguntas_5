@@ -5,29 +5,108 @@ const botonJugar= document.getElementById("btnJugar");
 //creo un objeto que tiene una propiedad llamada pregunta
 const preguntas = [
     {
-        pregunta:"1.Quien mato a roger rabits?",
+        pregunta:"1.Cuántas temporadas tuvo 'The walking dead'?",
         //creo un objeto dentro de otro que contiene tres propiedades que manejo como opciones
         respuestas: {
-            a:"milton casco",
-            b:"sss",
-            c:"jjc"
+            a:"8",
+            b:"9",
+            c:"10"
         },
         //creo otra propiedad que tendra la respuesta correcta de cada objeto
-        acertar:"b"
+        acertar : "c"
+    },
+    //cada pregunta será un nuevo objeto con las propiedades del anterior
+    {
+        pregunta:"2.Cuál es el nombre real de Marilyn Monroe?",
+        respuestas: {
+            a:"Johanna",
+            b:"Norma",
+            c:"Emily"
+        },
+        acertar : "b"
     },
     {
-        pregunta:"2.Quien mato a roger rabits?",
-        //creo un objeto dentro de otro que contiene tres propiedades que manejo como opciones
+        pregunta:"3.Quién es el director de Piratas del Caribe ,la maldición del perla negra?",
         respuestas: {
-            a:"chavez",
-            b:"sss",
-            c:"jjc"
+            a:"Ted Elliot",
+            b:"Terry Rossio",
+            c:"Hans Zimmer",
+            d:"Gore Verbinski"
         },
-        //creo otra propiedad que tendra la respuesta correcta de cada objeto
-        acertar:"c"
+        acertar : "d"
+    },
+    {
+        pregunta:"4.Como se llama el actor, compañero de John Travolta en Pulp Fiction?",
+        respuestas: {
+            a:"Martin Laurence",
+            b:"Samuel L. Jackson",
+            c:"Johnny Depp",
+            d:"Denzel Washigton"
+        },
+        acertar : "b"
+    },
+    {
+        pregunta:"5.De qué compañia es la película Las Crónicas de Narnia: el león, la bruja y el ropero?",
+        respuestas: {
+            a:"Dreamworks",
+            b:"Walt Disney Pictures",
+            c:"Warner Bros."
+        },
+        acertar : "b"
+    },
+    {
+        pregunta:"6.En qué año se lanzo la primera pelicula de Matrix?",
+        respuestas: {
+            a:"1998",
+            b:"1997",
+            c:"2000",
+            d:"2001",
+            e:"1999"
+        },
+        acertar : "e"
+    },
+    {
+        pregunta:"7.Qué profesión no tuvo Arnold Schwarzenegger ",
+        respuestas: {
+            a:"Fisicoculturista",
+            b:"Político",
+            c:"Director de Finanzas",
+            d:"Gobernador",
+            e:"Director de tv"
+        },
+        acertar : "c"
+    },
+    {
+        pregunta:"8.Cómo se llamaba la hermana de Michael Corleone en el padrino?",
+        respuestas: {
+            a:"Constanza",
+            b:"Coraline",
+            c:"Caroline"
+        },
+        acertar : "a"
+    },
+    {
+        pregunta:"9.A que dedicaba el papel de Julia Roberts en mujer bonita?",
+        respuestas: {
+            a:"Reportera",
+            b:"Estrella de cine",
+            c:"Prostituta",
+            d:"Abogada"
+        },
+        acertar : "c"
+    },
+    {
+        pregunta:"10.En qué pelicula de 'Rápido y Furioso' muere rodando Paul Walker?",
+        respuestas: {
+            a:"7",
+            b:"8",
+            c:"9"
+        },
+        acertar : "a"
     },
 ];
-//cada pregunta será un nuevo objeto con las propiedades del anterior
+
+
 
 //creo la funcion que inyectará en el html lo que tiene este archivo js
 function veamosJugar(){
@@ -47,7 +126,7 @@ function veamosJugar(){
                 </label> `
             );
         }
-        //acá tomo el objeto completo, donde tomo la pregunta actual por cada iteración, hago lo mismo con las respuestas
+        //acá tomo el objeto completo, donde tomo la pregunta actual por cada iteración y la coloco en un div, hago lo mismo con las respuestas
         juegoCompleto.push(
            ` <div class="preg">
                 ${pActual.pregunta}
@@ -59,30 +138,31 @@ function veamosJugar(){
             );
     });
     //opmitimizo mi código con la función join para que quede más limpio
-    contenedorJugar.innerHTML=juegoCompleto.join("\n");
+    contenedorJugar.innerHTML=juegoCompleto.join('');
 }
 veamosJugar();
 
 //creo una función que compruebe las respuestas por el checkbox marcado
 function verPerformance(){
-    //capturo el div que cree y me da un array
-    const respuestas= contenedorJugar.querySelectorAll(".respuestas");
-    let aciertos=0;//contador para obtener el resultado
-    //armo el bucle que recorre la pregunta actual y su numero de pregunta
+    //capturo el div que cree por su clase ".respuestas"
+    const respuestas = contenedorJugar.querySelectorAll(".respuestas");
+    let aciertos=0;//contador para obtener el resultado, armo el bucle que recorre la pregunta actual y su numero de pregunta
     preguntas.forEach((pActual, numPreg)=>{
         //aca guardo todas las respuestas y las recorro una a una, luego checkeo el nombre y el numero del indice
         const listarRespuestas= respuestas[numPreg];
-        const checkear= `input [name= '${numPreg}']:checked`;
+        const checkear= `input[name='${numPreg}']:checked`;
         //aca guardo la pregunta elegida y compuebo cual se selecciono
-        const seleccionada= (listarRespuestas.querySelector(checkear) || {}).value;//esto va por si el usuario no marco nada
+        const seleccionada = (listarRespuestas.querySelector(checkear) || {}).value;//esto va por si el usuario no marco nada
         //compruebo la casilla elegida con la pregunta actual y su respuesta correcta y de ser valida la sumo como acierto
-        if(seleccionada=== pActual.acertar){
-            aciertos ++;
-        
-     } 
+        if(seleccionada === pActual.acertar){
+            aciertos++;
+         respuestas[numPreg].style.color='green';
+     } else{
+         respuestas[numPreg].style.color='yellow';
+     }
 
     });
-    resultadoJugar.innerHTML='Tus aciertos son:'+ aciertos+ 'preguntas de un total de: '+ preguntas.length;
+    resultadoJugar.innerHTML = 'Cantidad de aciertos:  ' + aciertos + 'preguntas de un total de: '+ preguntas.length;
 }
  botonJugar.addEventListener('click', verPerformance);
 
