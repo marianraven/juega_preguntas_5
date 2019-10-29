@@ -1,0 +1,62 @@
+html {
+/*defino el marco general de mi pagina*/
+    height:100%;
+    width:100%;
+}
+
+body{
+    background-size:100% 100%;
+    background-image: url('./fondoColorido.jpg');
+/* Para dejar la imagen de fondo centrada, vertical y horizontalmente */
+    background-position: center center;
+/* Para que la imagen de fondo no se repita */
+    background-repeat: no-repeat;
+/* La imagen se fija en la ventana de visualización para que la altura de la imagen no supere a la del contenido */
+    background-attachment: fixed;
+/* La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador */
+    background-size: cover;
+/* Se muestra un color de fondo mientras se está cargando la imagen de fondo o si hay problemas para cargarla */
+    background-color: #6699
+}
+h1{
+    color: rgb(rgba(2, 2, 7, 0.6));
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: oblique;
+    text-shadow: (-7px, 7px, 7px, white);
+    text-align: center;
+    font-size: 48px;
+    font-weight: 900;
+    margin-top: 80px;
+    
+}
+h3{
+    color: rgb(rgba(1, 1, 2, 0.6));
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: oblique;
+    text-shadow: (-5px, 5px, 5px, grey);
+    text-align: center;
+    font-size: 38px;
+    font-weight: bold;
+}
+
+div{
+
+    background-color: rgb(142, 96, 185);
+    text-align: left;
+}
+span{
+    color:black;
+    
+}
+#btnVolver{
+    border-radius: 27px 27px 27px 27px;
+    -moz-border-radius: 27px 27px 27px 27px;
+    -webkit-border-radius: 27px 27px 27px 27px;
+    border: 4px inset #33a8cc;
+}
+#btnJugar{
+    border-radius: 27px 27px 27px 27px;
+    -moz-border-radius: 27px 27px 27px 27px;
+    -webkit-border-radius: 27px 27px 27px 27px;
+    border: 4px inset #33cc38;
+}
