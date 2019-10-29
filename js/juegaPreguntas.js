@@ -2,7 +2,6 @@
 const contenedorJugar= document.getElementById("jugar");
 const resultadoJugar= document.getElementById("resultado");
 const botonJugar= document.getElementById("btnJugar");
-const botonVolver= document.getElementById("volver");
 //creo un objeto que tiene una propiedad llamada pregunta
 const preguntas = [
     {
@@ -72,7 +71,7 @@ const preguntas = [
             a:"Fisicoculturista",
             b:"Político",
             c:"Director de Finanzas",
-            d:"Gobernador",
+            d:"Goberneitor",
             e:"Director de tv"
         },
         acertar : "c"
