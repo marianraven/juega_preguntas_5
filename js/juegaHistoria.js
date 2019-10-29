@@ -1,21 +1,19 @@
-
 const contenedorJugar= document.getElementById("jugar");
 const resultadoJugar= document.getElementById("resultado");
 const botonJugar= document.getElementById("btnJugar");
 
 const preguntas = [
     {
-        pregunta:"1.Cuántos títulos lleva ganados como dt Marcelo Gallardo en River?",
+        pregunta:"1.Cuántos países componen el continente de Oceanía?",
         respuestas: {
-            a:"8",
-            b:"9",
-            c:"10"
+            a:"10",
+            b:"12",
+            c:"14"
         },
         acertar : "c"
     },
-
     {
-        pregunta:"2.En qué equipo no jugó Slatan Ibrahimovic  ?",
+        pregunta:"2.Cual de éstos equipos no pertenecen a Europa?",
         respuestas: {
             a:"Real Madrid",
             b:"Paris Saint-Germain",
@@ -24,95 +22,83 @@ const preguntas = [
             e:"Juventus",
             f:"LOs Angeles Galaxy"
         },
+        acertar : "f"
+    },
+    {
+        pregunta:"3.Cuál es el volcán más activo del mundo?",
+        respuestas: {
+            a:"Yellowstone, Estados Unidos",
+            b:"Sakurajima, Japón",
+            c:"Monte Vesubio, Italia"
+        },
         acertar : "a"
     },
-
     {
-        pregunta:"3.En que deporte destaca internacionalmente el argentino Luis Scola?",
+        pregunta:"4.Cuál es la capital de Eslovenia?",
         respuestas: {
-            a:"Handball",
-            b:"Tennis",
-            c:"Basquet",
-            d:"Natación"
-        },
-        acertar : "c"
-    },
-
-    {
-        pregunta:"4.Quién ganó el mundial de futbol de 1982?",
-        respuestas: {
-            a:"Alemania",
-            b:"España",
-            c:"Mexico",
-            d:"Francia",
-            e:"Italia"
-        },
-        acertar : "e"
-    },
-
-    {
-        pregunta:"5.Cuántos torneos internacionales ganaron las leonas?",
-        respuestas: {
-            a:"15",
-            b:"17",
-            c:"20",
-            d:"25"
+            a:"Andoxia",
+            b:"Eslotev",
+            c:"Lausesburg",
+            d:"Liubliana"
         },
         acertar : "d"
     },
-
     {
-        pregunta:"6.En qué año gano Racing su ultimo torneo?",
+        pregunta:"5.Cuántos departamentos conforman el país de Francia sin contar los considerados de ultramar?",
         respuestas: {
-            a:"2000",
+            a:"11",
+            b:"12",
+            c:"13",
+            d:"15"
+        },
+        acertar : "c"
+    },
+    {
+        pregunta:"6.En qué año se independizó Sudán del sur?",
+        respuestas: {
+            a:"1999",
             b:"2001",
-            c:"2002",
-            d:"2003",
-            e:"2005"
+            c:"2005",
+            d:"2011",
+            e:"2015"
+        },
+        acertar : "d"
+    },
+    {
+        pregunta:"7.Cual es el lago más grande de la republica Argentina? ",
+        respuestas: {
+            a:"Lago Nahuel Huapi",
+            b:"Lago Viedma",
+            c:"Lago Argentino"
         },
         acertar : "c"
     },
-
     {
-        pregunta:"7.Cual de los siguientes no es o fue un Nadador/a destacado de la selección Argentina ",
+        pregunta:"8.Cuál es el país menos poblado del mundo?",
         respuestas: {
-            a:"Cecilia Biagioli",
-            b:" José Meolans",
-            c:"Joaquín Pastorillo",
-            d:" Pilar Geijo"
+            a:"San Marino",
+            b:"Mónaco",
+            c:"Islas Marshall",
+            d:"Vaticano"
         },
-        acertar : "c"
+        acertar : "d"
     },
-
     {
-        pregunta:"8.Cuantos títulos consiguió Juan Manuel Fangio?",
+        pregunta:"9.Cuál es la verdadera capital de Bolivia?",
         respuestas: {
-            a:"5",
-            b:"7",
-            c:"3",
-            d:"4"
-        },
-        acertar : "a"
-    },
-
-    {
-        pregunta:"9.Cuántos minutos dura un partido de básquet de la NBA?",
-        respuestas: {
-            a:"4 tiempos de 10 minutos",
-            b:"4 tiempos de 12 minutos",
-            c:"4 tiempos de 15 minutos",
-            d:"4 tiempos de 20 minutos"
+            a:"Bolivia",
+            b:"Sucre",
+            c:"La Paz"
         },
         acertar : "b"
     },
-    
     {
-        pregunta:"10.En qué categoría del boxeo es Andy Ruiz Jr. actual campeón mundial?",
+        pregunta:"10.En qué país se encuentran los mayores pozos Petrolíferos del mundo?",
         respuestas: {
-            a:"peso semi_mosca",
-            b:"peso pesado",
-            c:"peso crucero", 
-            d:"Peso superwélter"
+            a:"Arabia Saudí",
+            b:"Venezuela",
+            c:"Canadá",
+            d:"Irán"
         },
         acertar : "b"
     },

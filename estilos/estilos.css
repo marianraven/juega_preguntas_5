@@ -16,47 +16,113 @@ body{
 /* La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador */
     background-size: cover;
 /* Se muestra un color de fondo mientras se está cargando la imagen de fondo o si hay problemas para cargarla */
-    background-color: #6699
+    background-color: #6699;
+    text-align: left;
 }
 h1{
     color: rgb(rgba(2, 2, 7, 0.6));
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: oblique;
-    text-shadow: (-7px, 7px, 7px, white);
     text-align: center;
     font-size: 48px;
     font-weight: 900;
     margin-top: 80px;
     
 }
+.principal{
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
 h3{
     color: rgb(rgba(1, 1, 2, 0.6));
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: oblique;
-    text-shadow: (-5px, 5px, 5px, grey);
     text-align: center;
     font-size: 38px;
     font-weight: bold;
 }
 
 div{
-
     background-color: rgb(142, 96, 185);
     text-align: left;
 }
+.respuestas{
+    margin: 5px;
+    padding: 2px;
+    text-align: left;
+    font-weight: bolder;
+}
 span{
     color:black;
-    
+  
+}
+
+.background{
+    width: 70px; 
+    height: 70px;
+}
+
+.cine{
+    background:linear-gradient(to right, rgba(30,10,176,1) 0%, rgba(30,10,176,1) 12%, rgba(73,155,234,1) 55%, rgba(73,155,234,1) 98%);
+    border: 4px inset #33a8cc;
+    margin-top: 50px;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.deportes{
+    background:linear-gradient(to right, rgb(2, 41, 2) 0%, rgb(13, 116, 13) 40%, rgb(176, 223, 34) 70%, rgba(157,199,30,1) 100%);
+    border: 4px inset #33a8cc;
+    margin-top: 50px;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+.paises{
+    margin-top: 50px;
+    background: linear-gradient(to right, rgba(79,14,112,1) 0%, rgba(79,14,112,1) 10%, rgba(168,0,119,1) 31%, rgba(79,14,112,1) 65%, rgba(203,96,179,1) 93%, rgba(203,96,179,1) 100%);
+    border: 4px inset #33a8cc;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+.animales{
+    margin-top: 50px;
+    background:linear-gradient(to right, rgb(248, 113, 50) 0%, rgba(212,17,17,1) 38%, rgb(177, 57, 41) 51%, rgb(240, 121, 23) 91%, rgb(208, 219, 48) 100%);
+    border: 4px inset #33a8cc;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+.historia{
+    margin-top: 50px;
+    background: linear-gradient(to right, rgb(16, 14, 112) 0%, rgb(14, 60, 112) 10%, rgb(59, 0, 168) 31%, rgb(3, 8, 73) 65%, rgb(12, 84, 105) 93%, rgb(24, 43, 102) 100%);
+    border: 4px inset #33a8cc;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 #btnVolver{
     border-radius: 27px 27px 27px 27px;
     -moz-border-radius: 27px 27px 27px 27px;
     -webkit-border-radius: 27px 27px 27px 27px;
     border: 4px inset #33a8cc;
+    background-color:#33cc38 ;
+
 }
 #btnJugar{
     border-radius: 27px 27px 27px 27px;
     -moz-border-radius: 27px 27px 27px 27px;
     -webkit-border-radius: 27px 27px 27px 27px;
-    border: 4px inset #33cc38;
+    border: 6px inset #33a8cc;
+    background-color:#33cc38 ;
+    margin: 3px;
 }
+.preg{
+    margin: 5px;
+    background-color: rgb(26, 5, 212);
+    font-weight: bold;
+}
+
